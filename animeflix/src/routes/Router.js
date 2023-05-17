@@ -9,17 +9,18 @@ import { ContextoNovaCategoria, ContextoNovoVideo } from "../context";
 import {v4 as uuidv4} from "uuid"
 
 export const RouterPages = () => {
-    const[form, onChange , clean] = useForm({id:uuidv4(),titulos:"" , linkVideo:"",linkImgVideo:"",descricao:""});
-    const[formCtg, onChangeCtg,cleanCtg] = useFormNovaCtg({id:uuidv4(),name:"",descricao:"", codigo: ""})
-    const [novoVideo , setNovoVideo] = useState([""]);
-    const [novaCtg,setNovaCtg] = useState([""])
+    const[form, onChange , clean] = useForm({id:"",titulos:"" , linkVideo:"",linkImgVideo:"",categoria:"", descricao:""});
+    const[formCtg, onChangeCtg,cleanCtg] = useFormNovaCtg({id:"",name:"",descricao:"", codigo:""})
+    const [novoVideo , setNovoVideo] = useState([]);
+    const [novaCtg,setNovaCtg] = useState([])
   
     const buttonNovoVideo = (event) => {
         event.preventDefault()
-        setNovoVideo([...novoVideo,form ]);
+        setNovoVideo([...novoVideo,{id:form.id=uuidv4(),titulos:form.titulos,linkVideo:form.linkVideo, linkImgVideo:form.linkImgVideo, categoria:form.categoria,descricao:form.descricao } ]);
       return  alert("Video Criado com sucesso!")
     };
   
+ 
   
     
   //////////---------Nova categoria ----------------///////////////
@@ -27,7 +28,7 @@ export const RouterPages = () => {
   
   const buttonNovaCategoria = (event) => {
     event.preventDefault()
-    setNovaCtg([...novaCtg,formCtg]);
+    setNovaCtg([...novaCtg,{id:formCtg.id=uuidv4(),name:formCtg.name,descricao:formCtg.descricao,codigo:formCtg.codigo}])
   return  alert("Categoria Criado com sucesso!")
   };
   
@@ -43,7 +44,7 @@ export const RouterPages = () => {
     return(
       
         <ContextoNovoVideo.Provider value={{
-            id:form.id, titulos:form.titulos, linkVideo:form.linkVideo, linkImgVideo:form.linkImgVideo , descricao:form.descricao ,novoVideo:novoVideo, buttonNovoVideo: buttonNovoVideo, onChange:onChange, clean:clean }}  >
+            id:form.id, titulos:form.titulos, linkVideo:form.linkVideo, linkImgVideo:form.linkImgVideo , descricao:form.descricao ,novoVideo:novoVideo, buttonNovoVideo: buttonNovoVideo, onChange:onChange, clean:clean, categoria:form.categoria  }}  >
             <ContextoNovaCategoria.Provider value={{
                     id:formCtg.id, name:formCtg.name, descricao:formCtg.descricao, codigo:formCtg.cotigo ,buttonNovaCategoria:buttonNovaCategoria, onChangeCtg:onChangeCtg, cleanCtg:cleanCtg, novaCtg:novaCtg,buttonDeleteCategoria:buttonDeleteCategoria
                 }}>

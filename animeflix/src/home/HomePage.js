@@ -14,7 +14,6 @@ export  const HomePage = () => {
     <div >
       <Nav nome={"Novo Video"}/>
       <Header/>
-    
       <Main/>
       <Footer/>
     </div>

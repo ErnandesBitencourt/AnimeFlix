@@ -4,6 +4,7 @@ import { Nav } from "../../components/nav/Nav";
 import { InputDescr, Inputs } from "../../components/inputs/Inputs";
 import { ButtonEnviar, ButtonLimpar, ButtonModificarPage } from "../../components/buttons/Buttons";
 import { Footer } from "../../components/footer/Footer";
+import {ListaDeOpçõesCategorias} from "../../endpoints/listaDeOpçõesCategorias/ListaDeOpçõesCategorias"
 
 export const NovoVideo = () => {
    
@@ -31,7 +32,7 @@ export const NovoVideo = () => {
                     placeholder={"link da imagem do video"}
                     type={"text"} 
                      name={"linkImgVideo"}  />
-          
+                <ListaDeOpçõesCategorias/>    
                 <InputDescr value={videoNovo.descricao}
                     onchange={videoNovo.onChange}
                     placeholder={"descricao"}

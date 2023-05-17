@@ -1,11 +1,12 @@
 import React from "react";
+import { ListaDeVideos } from "../../endpoints/listaDeVideos/ListaDeVideos";
 
 export const Main = () => { 
 
 
     return (
         <div> 
-            <p>Lista de videos</p>
+            <ListaDeVideos/>
         </div>
 
     )
