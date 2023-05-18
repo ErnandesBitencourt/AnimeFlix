@@ -40,7 +40,6 @@ export const NovaCategoria =  () => {
             </form>
             <section>
                <ListaDeCategorias/>
-               
             </section>
             <Footer/>
         </div>

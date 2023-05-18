@@ -3,10 +3,10 @@ import { ContextoNovaCategoria } from "../../context";
 
 
 export const ListaDeCategorias = () => {
-const listNocaCategoria = useContext(ContextoNovaCategoria);
+const listNovaCategoria = useContext(ContextoNovaCategoria);
 
 
-const categoriaCriadas = listNocaCategoria.novaCtg.map((categorias)=> {
+const categoriaCriadas = listNovaCategoria.novaCtg.map((categorias)=> {
 
     return (
         <article key={categorias.id} >
@@ -20,8 +20,8 @@ const categoriaCriadas = listNocaCategoria.novaCtg.map((categorias)=> {
                 <tr>
                     <td>{categorias.name}</td>
                     <td>{categorias.descricao}</td>
-                    <td>Editar em produção</td>
-                    <td><button onClick={()=> listNocaCategoria.buttonDeleteCategoria(categorias.id)} >Remover</button></td>
+                    <td><button  >Editar</button></td>
+                    <td><button onClick={()=> listNovaCategoria.buttonDeleteCategoria(categorias.id)} >Remover</button></td>
                 </tr>
                
             </table>
