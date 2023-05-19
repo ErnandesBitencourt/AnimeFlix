@@ -10,7 +10,7 @@ export const useFormNovaCtg = (estadoinicial) => {
         setformCtg({...formCtg,[name]:value})
     }
     const cleanCtg = () => {
-        setformCtg(estadoinicial)
+       return setformCtg(estadoinicial)
     }
     return[formCtg, onChangeCtg,cleanCtg ]
 }
