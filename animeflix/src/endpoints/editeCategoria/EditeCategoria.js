@@ -4,9 +4,18 @@ import { InputDescr, Inputs } from "../../components/inputs/Inputs";
 import { ButtonEnviar } from "../../components/buttons/Buttons";
 
 
-export const  EditeCategoria = ({categorias}) => {
+export const  EditeCategoria = ({categorias,name,descricao}) => {
     const categoriaNova = useContext(ContextoNovaCategoria);
+    const onChangeEdtCtgName = (event,) => {
+        const {name,value} = event.target
+        const categoriaEditada = categoriaNova.novaCtg.map((lista)=> {
+           return lista.id === categorias? {...lista, [name]:value} : lista
+        })
+        categoriaNova.setNovaCtg(categoriaEditada)
+    };
 
+
+   
    
     return (
         <div>
@@ -14,15 +23,15 @@ export const  EditeCategoria = ({categorias}) => {
             <form onSubmit={categoriaNova.buttonSalvarEdicao}  >
 
                     <tr>
-                        <td> <Inputs value={categoriaNova.name} 
-                            onchange={categoriaNova.onChangeCtg} 
+                        <td> <Inputs value={name} 
+                            onchange={onChangeEdtCtgName} 
                             placeholder={"Nome"} 
                             type={"text"} name={"name"}
                             />
                         </td>
                         <td>
-                            <InputDescr  value={categoriaNova.descricao} 
-                                    onchange={categoriaNova.onChangeCtg} 
+                            <InputDescr  value={descricao} 
+                                    onchange={onChangeEdtCtgName} 
                                     placeholder={"Descrição"} 
                                     type={"text"} name={"descricao"}
                         

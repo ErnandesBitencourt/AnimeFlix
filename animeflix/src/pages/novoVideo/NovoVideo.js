@@ -38,7 +38,6 @@ export const NovoVideo = () => {
                     placeholder={"descricao"}
                     type={"text"} 
                     name={"descricao"}/>
-                <Inputs/>
                 
                 <span>
                     <div>  

@@ -5,9 +5,6 @@ import { ButtonEnviar, ButtonLimpar } from "../../components/buttons/Buttons";
 import { Footer } from "../../components/footer/Footer";
 import { ContextoNovaCategoria } from "../../context";
 import { ListaDeCategorias } from "../../endpoints/listaDeCategorias/ListaDeCategorias";
-
-
-
 export const NovaCategoria =  () => {
     const categoriaNova = useContext(ContextoNovaCategoria);
       return(
@@ -26,13 +23,7 @@ export const NovaCategoria =  () => {
                             onchange={categoriaNova.onChangeCtg} 
                             placeholder={"Descrição"} 
                             type={"text"} name={"descricao"}
-                
                 />
-                <Inputs  value={categoriaNova.codigo}
-                        onchange={categoriaNova.onChangeCtg} 
-                        placeholder={"codigo de segurança"} 
-                        type={"text"} name={"codigo"}
-                    />
                 <span>
                    <ButtonEnviar name={"Salvar"} />
                    <ButtonLimpar clear= {categoriaNova.cleanCtg}  name={"Limpar"}  /> 

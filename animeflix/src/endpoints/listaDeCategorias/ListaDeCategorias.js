@@ -10,7 +10,7 @@ const listNovaCategoria = useContext(ContextoNovaCategoria);
 const categoriaCriadas = listNovaCategoria.novaCtg.map((categorias)=> {
    
     return (
-               listNovaCategoria.editCategoria === categorias.id ? <EditeCategoria categorias={categorias.id} /> :
+               listNovaCategoria.editCategoria === categorias.id ? <EditeCategoria categorias={categorias.id} name={categorias.name} descricao={categorias.descricao} /> :
                 <tr key={categorias.id} >
                     <td>{categorias.name}</td>
                     <td>{categorias.descricao}</td>

@@ -16,7 +16,7 @@ export const ButtonEnviar = ({name}) => {
 export const ButtonLimpar = ({name,clear}) => {
 
     return (
-        <button onClick={()=>clear()}  >
+        <button onClick={()=>clear()}>
             {name}
         </button>
     )
