@@ -3,6 +3,7 @@ import { Nav } from "../components/nav/Nav";
 import { Footer } from "../components/footer/Footer";
 import { Main} from "../components/main/Main"
 import {Header} from "../components/header/Header"
+import { Container } from "./StyledHomePage";
 
 
 
@@ -11,12 +12,12 @@ export  const HomePage = () => {
 
 
   return (
-    <div >
+    <Container >
       <Nav nome={"Novo Video"}/>
       <Header/>
       <Main/>
       <Footer/>
-    </div>
+    </Container>
   );
 }
 

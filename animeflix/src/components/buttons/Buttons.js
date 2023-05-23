@@ -1,8 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { novaCategoriaPage, novoVideoPage, voltarPage } from "../../routes/coordenador";
-
-
+import { MpButton } from "./StyledButtons";
 
 
 export const ButtonEnviar = ({name}) => {
@@ -37,8 +36,10 @@ export const ButtonModificarPage = ({name}) => {
     }
 
     return (
-        <button onClick={()=>modicarPages()  } >
+       
+        <MpButton   onClick={()=>modicarPages()  } >
            {name}
-        </button>
+        </MpButton>
+        
     )
 }

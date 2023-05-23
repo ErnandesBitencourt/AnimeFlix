@@ -3,6 +3,9 @@ import { ButtonModificarPage} from "../buttons/Buttons";
 import { useNavigate } from "react-router-dom";
 import { homePage } from "../../routes/coordenador";
 
+import AnimeFlixunscreen from "../../img/AnimeFlixunscreen.gif"
+import { Div, Img  } from "../nav/StyledNav";
+
 
 
 
@@ -10,10 +13,12 @@ export const Nav = ({nome}) => {
     const navigate =  useNavigate();
 
     return (
-        <div>
-            <h1 onClick={()=>homePage(navigate)}>AnimeFlix</h1>
+        <Div>
+            <Img  onClick={()=>homePage(navigate)}  src={AnimeFlixunscreen} alt="gif do logo da pagina"   />
+            
+            
             <ButtonModificarPage name={nome} />
-        </div>
+        </Div>
 
     )
 

@@ -5,7 +5,7 @@ export const Footer = () => {
 
     return(
         <div>
-            <p>AnimeFlix</p>
+            <p p>AnimeFlix</p>
         </div>
     )
 

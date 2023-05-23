@@ -1,11 +1,17 @@
 
 import React from "react"
 import { RouterPages } from "./routes/Router";
+import { GlobalStyle } from "./style/styleGlobal/StyledGlobal";
 
 
 function App() {
 
-  return  <RouterPages/>
+  return (
+    <>
+      <GlobalStyle/>
+       <RouterPages/>
+    </>
+  )
     
  
 }

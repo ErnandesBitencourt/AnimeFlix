@@ -25,7 +25,7 @@ export const ListaDeVideos = () => {
     })
     return (
         
-           <div>{listaDeVideosCriados} </div>
+           <div>{listaDeVideosCriados.length > 0 ? listaDeVideosCriados : " Nenhum video foi criado click no botão Novo Video e crie sua lista de animes favoritos. "} </div>
         
 
     )
