@@ -4,17 +4,19 @@ export const MpButton = styled.button`
 display: flex;
 justify-content: center;
 align-items: center;
-width: 8%;
-max-width: 7%;
-min-width: 98px ;
+width: 100%;
+max-width: 100%;
 height: 3em;
-color: #F8F8FF ;
-background-color: #c38425;
-font-size: 16px;
-padding: 5px;
+color: ${props => props.theme.Themers.textAlternativ}; 
+background-color:${props => props.theme.Themers.colorText};
+font-size: 14px;
+padding: 1.8em;
 box-sizing: border-box;
 text-align: center;
 cursor: pointer;
+border: none;
+font-weight: 700;
+
 
 `;
 

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { homePage } from "../../routes/coordenador";
 
 import AnimeFlixunscreen from "../../img/AnimeFlixunscreen.gif"
-import { Div, Img  } from "../nav/StyledNav";
+import { Div, Img, Span  } from "../nav/StyledNav";
 
 
 
@@ -17,7 +17,7 @@ export const Nav = ({nome}) => {
             <Img  onClick={()=>homePage(navigate)}  src={AnimeFlixunscreen} alt="gif do logo da pagina"   />
             
             
-            <ButtonModificarPage name={nome} />
+            <Span><ButtonModificarPage name={nome} /></Span>
         </Div>
 
     )
