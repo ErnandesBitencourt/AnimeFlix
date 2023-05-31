@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import { ContextoNovaCategoria } from "../../context";
-import { InputDescr, Inputs } from "../../components/inputs/Inputs";
+import { Inputs } from "../../components/inputs/Inputs";
 import { ButtonEnviar } from "../../components/buttons/Buttons";
+import { Button, ButtonsDiv, ContainerEdite, FormEdite, Span, Span1 } from "./StyledEditeCategoria";
 
 
 export const  EditeCategoria = ({categorias,name,descricao}) => {
@@ -18,39 +19,35 @@ export const  EditeCategoria = ({categorias,name,descricao}) => {
    
    
     return (
-        <div>
+        <ContainerEdite>
             
-            <form onSubmit={categoriaNova.buttonSalvarEdicao}  >
-
-                    <tr>
-                        <td> <Inputs value={name} 
+            <FormEdite onSubmit={categoriaNova.buttonSalvarEdicao}  >
+                        <Span> <Inputs value={name} 
                             onchange={onChangeEdtCtgName} 
                             placeholder={"Nome"} 
                             type={"text"} name={"name"}
                             />
-                        </td>
-                        <td>
-                            <InputDescr  value={descricao} 
+                        </Span>
+                        <Span1>
+                            <Inputs value={descricao} 
                                     onchange={onChangeEdtCtgName} 
                                     placeholder={"Descrição"} 
                                     type={"text"} name={"descricao"}
                         
                                 />
-                        </td>
-                        <td>
-                        <span>
-                            <ButtonEnviar name={"Salvar"} />       
-                            </span>
-                        </td>
-                            
-                        <td>
+                        </Span1>
+                        <ButtonsDiv>
                             <span>
-                            <button onClick={()=> categoriaNova.buttonDeleteCategoria(categorias)} >Remover</button>     
+                                <ButtonEnviar name={"Salvar"} />       
+                            </span>
+                        
+                            <span>
+                                <Button onClick={()=> categoriaNova.buttonDeleteCategoria(categorias)} >Remover</Button>     
                             </span>
 
-                        </td>
-                    </tr>
-            </form>
-        </div>
+                        </ButtonsDiv>
+                    
+            </FormEdite>
+        </ContainerEdite>
     )
 }

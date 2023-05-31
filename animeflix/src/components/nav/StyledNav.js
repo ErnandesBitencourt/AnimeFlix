@@ -5,14 +5,13 @@ import { styled } from "styled-components";
 export const Div = styled.div`
     width: 100%;
     max-width: 85%;
-    min-width: 500px;
+    min-width: 320px;
     height: 7em;
     min-height: 4em;
     display: flex;
     flex: 1  1;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
     background-color: ${props => props.theme.Themers.backgroundColor};
     
 `;

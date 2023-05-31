@@ -6,18 +6,18 @@ import { MpButton } from "./StyledButtons";
 
 export const ButtonEnviar = ({name}) => {
     return (
-        <button type="submit">
+        <MpButton type="submit">
            {name}
-        </button>
+        </MpButton>
     )
 }
 
 export const ButtonLimpar = ({name,clear}) => {
 
     return (
-        <button onClick={()=>clear()}>
+        <MpButton onClick={()=>clear()}>
             {name}
-        </button>
+        </MpButton>
     )
 }
 

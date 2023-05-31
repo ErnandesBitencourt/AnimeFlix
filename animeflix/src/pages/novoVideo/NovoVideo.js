@@ -5,7 +5,7 @@ import { InputDescr, Inputs } from "../../components/inputs/Inputs";
 import { ButtonEnviar, ButtonLimpar, ButtonModificarPage } from "../../components/buttons/Buttons";
 import { Footer } from "../../components/footer/Footer";
 import {ListaDeOpçõesCategorias} from "../../endpoints/listaDeOpçõesCategorias/ListaDeOpçõesCategorias"
-import { ContainerNovoVideo,  Divbuttons,  Formulario, Header1, Main, Spanform } from "./StyledNovoVideo";
+import { ContainerNovoVideo,  DivSelect,  Divbuttons,  Formulario, Header1, Main, Spanform } from "./StyledNovoVideo";
 
 export const NovoVideo = () => {
    
@@ -34,7 +34,9 @@ export const NovoVideo = () => {
                             placeholder={"link da imagem do video"}
                             type={"text"} 
                             name={"linkImgVideo"}  />
-                        <ListaDeOpçõesCategorias/>    
+
+                        <DivSelect><ListaDeOpçõesCategorias/> </DivSelect>
+
                         <InputDescr value={videoNovo.descricao}
                             onchange={videoNovo.onChange}
                             placeholder={"descricao"}
@@ -47,8 +49,12 @@ export const NovoVideo = () => {
                                 
                             </div>
                             <Divbuttons>
-                                <ButtonLimpar  clear= {videoNovo.clean}  name={"Limpar"} />
-                                <ButtonModificarPage name={"Nova Categoria"} /> 
+                                <span>
+                                    <ButtonLimpar  clear= {videoNovo.clean}  name={"Limpar"} /> 
+                                </span>
+                                <span>
+                                    <ButtonModificarPage name={"Nova Categoria"} /> 
+                                </span>
                             </Divbuttons>
                         </Spanform>
 

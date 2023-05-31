@@ -7,14 +7,15 @@ export const ListaDeVideos = () => {
   
     const videosNovos = useContext(ContextoNovoVideo);
     const categoriasNovas = useContext(ContextoNovaCategoria);
-    const listaDeVideosCriados = categoriasNovas.novaCtg.map((videos) => {
+    const listaDeVideosCriados = categoriasNovas.novaCtg.map((videos) => 
+    {
         const videosNovosPorcategoria = videosNovos.novoVideo.filter(videosN=> videosN.categoria === videos.name )
         return (
             <div>
                 <main>
                     {videos.name}
                     <span>
-                    {videosNovosPorcategoria.map((x)=> {
+                    {videosNovosPorcategoria.length>0? videosNovosPorcategoria.map((x)=> {
                         return (
                             <div key={x.id} >
                               <Player  
@@ -33,7 +34,7 @@ export const ListaDeVideos = () => {
                                 <span>{x.descricao} </span>
                             </div>
                         )
-                    })}
+                    }) :""}
                 </span>
                 </main>   
             </div>  
@@ -41,7 +42,7 @@ export const ListaDeVideos = () => {
     })
     return (
         
-           <div>{listaDeVideosCriados.length > 0 ? listaDeVideosCriados : " Nenhum video foi criado click no botão Novo Video e crie sua lista de animes favoritos. "} </div>
+           <div>{videosNovos.novoVideo.length > 0 ? listaDeVideosCriados : " Nenhum video foi criado click no botão Novo Video e crie sua lista de animes favoritos. "} </div>
         
 
     )

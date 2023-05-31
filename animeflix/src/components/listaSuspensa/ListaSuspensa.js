@@ -1,11 +1,13 @@
 import React from "react"
+import { ContainerListaSuspensa, Select1 } from "./StyledListaSuspensa"
 export const ListaSuspensa = ({ items,  value, onchange,placeholder}) => {
     return (
-    <div >
-        <select required placeholder={placeholder} value={value} onChange={onchange}>
+    
+        <section  required placeholder={placeholder} value={value} onChange={onchange}>
             <option />
             {items}
-        </select>
-    </div>)
+        </section>
+    
+    )
 }
 
